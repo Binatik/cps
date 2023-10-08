@@ -1,16 +1,20 @@
-@import '../utils/vars.scss';
-@import '../utils/mixin.scss';
+@import '../global.scss';
 
 .title {
   letter-spacing: -0.6px;
 }
 
 .title--mode--primary {
-  color: #000;
-} 
+  color: $base-color;
+}
 
 .title--size--extra {
-  font-size: 28px;
+  // font-size (в rem) = 28px / 16px = 1.75rem
+  // Таким образом, значение font-size 28px в rem составит 1.75rem при базовом размере шрифта 16px.
+  font-size: 1.75rem;
   font-weight: 700;
-  line-height: 12px;
-} 
+
+  // line-height (в rem) = 40px / 16px = 2.5rem
+  // Таким образом, значение line-height в rem при 16px font-size и желаемом значении 28px составит 1.75rem.
+  line-height: 2.5rem;
+}

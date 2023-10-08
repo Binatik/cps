@@ -1,0 +1,27 @@
+@import '../global.scss';
+
+.link {
+  letter-spacing: -0.2px;
+}
+
+.link--mode--primary {
+  color: $base-color;
+  text-decoration: none;
+  border-left: 4px solid transparent;
+  transition: 0.2s color, 0.2s border;
+} 
+
+.link--size--small {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  padding: 3px 19px;
+} 
+
+
+@media (hover: hover) {
+  .link--mode--primary:hover {
+    color: $hover-primary;
+    border-left: 4px solid $border-light;
+  }
+}
