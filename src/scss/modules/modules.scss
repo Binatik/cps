@@ -1,5 +1,7 @@
-$mainFont                : 'TTLakes', sans-serif;
+@import '../utils/vars.scss';
+@import '../utils/mixin.scss';
 
 body {
-  font-size: $mainFont;
+  font-weight: 400;
+  font-family: $mainFont;
 }

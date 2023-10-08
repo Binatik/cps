@@ -1,10 +1,11 @@
-import '../scss/utils/normolize.scss'
-import '../scss/utils/vars.scss'
-import '../scss/utils/fonts.scss'
-import '../scss/utils/mixin.scss'
+import "../scss/utils/normolize.scss";
+import "../scss/utils/fonts.scss";
+import "../scss/utils/vars.scss";
 
-import '../scss/ui/title.scss'
+import { header } from "./modules";
+import { title } from "./ui";
 
-import '../scss/modules/modules.scss'
+console.log("Test complited Webpack");
 
-console.log('Test complited Webpack')
+header()
+title()
