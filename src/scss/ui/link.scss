@@ -3,10 +3,18 @@
 }
 
 .link--mode--primary {
-  color: $base-color;
   text-decoration: none;
+  color: $base-color;
   border-left: 4px solid transparent;
   transition: 0.2s color, 0.2s border;
+} 
+
+.link--mode--secondary {
+  text-decoration: none;
+  color: $light-color;
+  border-radius: 6px;
+  border: 2px solid transparent;
+  transition: 0.2s border;
 } 
 
 .link--size--small {
@@ -16,10 +24,23 @@
   padding: 3px 19px;
 } 
 
+.link--size--md {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  padding: 8px 16px;
+} 
+
+
+
 
 @media (hover: hover) {
   .link--mode--primary:hover {
     color: $hover-primary;
     border-left: 4px solid $border-light;
+  }
+
+  .link--mode--secondary:hover {
+    border: 2px solid $border-lighter;
   }
 }
