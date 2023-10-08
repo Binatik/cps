@@ -1,3 +1,9 @@
+@import './utils/normolize.scss';
 @import './utils/vars.scss';
 @import './utils/mixin.scss';
-@import './utils/normolize.scss';
+
+@import './modules/modules.scss';
+
+@import './ui/link.scss';
+@import './ui/title.scss';
+
