@@ -58,6 +58,11 @@ module.exports = {
         test: /\.(svg|png|jpg|jpeg|webp)$/i,
         type: "asset/resource",
       },
+
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/resource',
+      },
     ],
   },
 
@@ -74,7 +79,7 @@ module.exports = {
 
     new HtmlWebpackPlugin({
       title: 'CPS',
-      templateContent: ({ htmlWebpackPlugin }) => '<!DOCTYPE html><html><head><meta charset="utf-8"><title>' + htmlWebpackPlugin.options.title + '</title></head><body><div id="app"></div></body></html>',
+      // templateContent: ({ htmlWebpackPlugin }) => '<!DOCTYPE html><html><head><meta charset="utf-8"><title>' + htmlWebpackPlugin.options.title + '</title></head><body><div id="app"></div></body></html>',
       filename: "index.html",
       template: "./src/index.html",
       minify: {

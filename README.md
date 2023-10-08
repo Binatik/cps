@@ -24,7 +24,7 @@ npm install -g npm
 ```bash
 $ git clone repository # Клонирование репозитория
 $ npm i # Установка зависимостей
-$ npm run # Запуск mode режиме
+$ npm run # Запуск в mode режиме
 ```
 
 ```js
