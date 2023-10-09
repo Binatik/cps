@@ -1,0 +1,50 @@
+.header {
+  &__container {
+    padding: 24px 16px;
+  }
+
+  &__top {
+    position: fixed;
+    width: 100%;
+    background-color: $default-color;
+    z-index: 10;
+  }
+
+  &__container-top {
+    padding: 24px 16px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 0 16px;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0 16px;
+  }
+
+  &__nav {
+    position: absolute;
+    display: block;
+    overflow-y: auto;
+    background-color: $default-color;
+    margin-top: 85px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-100%);
+    transition: 0.2s transform; 
+  }
+  // header__nav--action--open
+  &__nav--action--open {
+    transform: translateX(0)
+  }
+}

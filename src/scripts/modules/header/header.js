@@ -1,7 +1,10 @@
-import "../../../scss/modules/modules.scss";
-
 function header() {
-  console.log("Header");
+  const openNavigation = document.querySelector('#open-navigation')
+  const navigation = document.querySelector('.header__nav')
+
+  openNavigation.addEventListener('click', (event) => {
+    navigation.classList.toggle('header__nav--action--open')
+  })
 }
 
 export { header };

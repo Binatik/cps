@@ -1,4 +1,6 @@
 .link {
+  position: relative;
+  display: block;
   letter-spacing: -0.2px;
 }
 
@@ -6,7 +8,19 @@
   text-decoration: none;
   color: $base-color;
   border-left: 4px solid transparent;
-  transition: 0.2s color, 0.2s border;
+  transition: 0.2s color;
+} 
+
+.link--mode--primary::before {
+ content: '';
+ position: absolute;
+ left: 0;
+ top: 50%;
+ transform: translate(12px, -50%);
+ width: 4px;
+ height: 0;
+ background-color: transparent;
+ transition: 0.2s background-color, 0.2s transform, 0.2s height;
 } 
 
 .link--mode--secondary {
@@ -19,14 +33,14 @@
 
 .link--size--small {
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.5rem;
-  padding: 3px 19px;
+  padding: 3px 0;
 } 
 
 .link--size--md {
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.5rem;
   padding: 8px 16px;
 } 
@@ -37,7 +51,12 @@
 @media (hover: hover) {
   .link--mode--primary:hover {
     color: $hover-primary;
-    border-left: 4px solid $border-light;
+  }
+
+  .link--mode--primary:hover::before {
+    height: 80%;
+    background-color: $border-light;
+    transform: translate(-19.99px, -50%);
   }
 
   .link--mode--secondary:hover {
