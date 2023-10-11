@@ -1,6 +1,6 @@
 .link {
   position: relative;
-  display: block;
+  display: inline-block;
   letter-spacing: -0.2px;
 }
 
@@ -31,6 +31,16 @@
   transition: 0.2s border;
 } 
 
+.link--mode--mail {
+  text-decoration: none;
+  color: $base-color;
+}
+
+.link--mode--tel {
+  text-decoration: none;
+  color: $base-color;
+}
+
 .link--size--small {
   font-size: 1rem;
   font-weight: 500;
@@ -43,6 +53,12 @@
   font-weight: 500;
   line-height: 1.5rem;
   padding: 8px 16px;
+} 
+
+.link--size--super-extra {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 2rem;
 } 
 
 
@@ -61,5 +77,9 @@
 
   .link--mode--secondary:hover {
     border: 2px solid $border-lighter;
+  }
+
+  .link--mode--mail:hover {
+    text-decoration: underline
   }
 }

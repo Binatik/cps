@@ -1,0 +1,25 @@
+.button {
+  cursor: pointer;
+  letter-spacing: -0.2px;
+}
+
+.button--mode--settings {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  text-transform: uppercase;
+  color: $base-color;
+  transition: 0.2s color;
+}
+
+.button--size--md {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+}
+
+@media (hover: hover) {
+  .button--mode--settings:hover {
+    color: $hover-primary;
+  }
+}
