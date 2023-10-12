@@ -3,7 +3,8 @@ body {
   font-family: $mainFont;
   background-color: $fon-color;
   min-height: 5000px;
-  overflow: hidden
+  overflow: hidden;
+  backdrop-filter: blur(5px);
 }
 
 .vertical-line {
@@ -30,8 +31,27 @@ body {
   transition: 0.2s all;
 }
 
-@media (min-width: $smPhoneWidth) {
+.blure {
+  position: absolute;
+  background-color: $default-color;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  transition: 0.2s opacity, 0.2s visibility;
 }
 
-@media (min-width: $smPhoneWidth) {
+.blure--on {
+  visibility: visible;
+  opacity: 0.9605;
 }
+
+.blure--off { 
+  visibility: hidden;
+  opacity: 0;
+}
+
+@media (min-width: $smPhoneWidth) {}
+
+@media (min-width: $smPhoneWidth) {}
