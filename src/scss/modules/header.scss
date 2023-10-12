@@ -1,14 +1,11 @@
 .header {
   min-height: 100vh;
-  &__container {
-    padding: 24px 16px;
-  }
 
-  &__container-top {
+  &__container {
     position: relative;
+    padding: 24px 16px;
     background-color: $default-color;
     z-index: 10;
-    padding: 24px 16px;
     display: grid;
     align-items: center;
     grid-template-columns: repeat(2, 1fr);
@@ -25,5 +22,11 @@
     align-items: center;
     justify-content: flex-end;
     gap: 0 16px;
+  }
+
+  &__search {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
   }
 }

@@ -22,7 +22,16 @@
     flex-direction: column;
     margin-bottom: 32px;
   }
-  
+
+  &__link {
+    padding: 1.1vh 0;
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+  }
 
   &__top {
     display: flex;

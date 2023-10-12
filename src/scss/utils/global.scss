@@ -1,0 +1,37 @@
+body {
+  font-weight: 400;
+  font-family: $mainFont;
+  background-color: $fon-color;
+  min-height: 5000px;
+  overflow: hidden
+}
+
+.vertical-line {
+  background-color: $border-lightex;
+  margin-right: 20px;
+  width: 2px;
+  height: 32px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 0;
+  width: 0;
+  transition: 0.2s all;
+}
+
+@media (min-width: $smPhoneWidth) {
+}
+
+@media (min-width: $smPhoneWidth) {
+}

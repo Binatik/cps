@@ -3,21 +3,27 @@ function header() {
   const trigger = document.querySelector(textAttr);
 
   trigger.addEventListener("click", () => {
-    const classNameOn = "menu--on";
-    const classNameOff = "menu--off";
+    const headerRight = document.querySelector(".header__right");
     const menu = document.querySelector(".header__menu");
-
+    const headerSearch = document.querySelector(".header__search");
+    const classMenuOn = "menu--on";
+    const classMenuOff = "menu--off";
+    const hidden = "hidden";
 
     trigger.dataset.menu = trigger.dataset.menu === "on" ? "off" : "on";
 
-    if (trigger.dataset.menu === 'off') {
-      menu.classList.remove(classNameOn);
-      menu.classList.add(classNameOff);
+    if (trigger.dataset.menu === "off") {
+      menu.classList.remove(classMenuOn);
+      menu.classList.add(classMenuOff);
+      headerRight.classList.remove(hidden);
+      headerSearch.classList.add(hidden);
       return;
     }
 
-    menu.classList.add(classNameOn);
-    menu.classList.remove(classNameOff);
+    menu.classList.add(classMenuOn);
+    menu.classList.remove(classMenuOff);
+    headerRight.classList.add(hidden);
+    headerSearch.classList.remove(hidden);
   });
 }
 
