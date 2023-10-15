@@ -1,7 +1,7 @@
 import '../scss/utils/fonts.scss'
 import '../scss/style.scss'
-import { header } from './modules/header/header'
+import { header, menu } from './modules'
 
 header()
-
+menu()
 

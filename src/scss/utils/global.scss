@@ -9,7 +9,6 @@ body {
 
 .vertical-line {
   background-color: $border-lightex;
-  margin-right: 20px;
   width: 2px;
   height: 32px;
 }
@@ -47,9 +46,40 @@ body {
   opacity: 0.9605;
 }
 
-.blure--off { 
+.blure--off {
   visibility: hidden;
   opacity: 0;
+}
+
+.hidden--table--on {
+  display: block;
+  visibility: visible;
+  position: relative;
+  z-index: 3;
+}
+
+.hidden--table--off {
+  display: none;
+  visibility: hidden;
+  position: absolute;
+  z-index: 1;
+}
+
+@media (min-width: $tableWidth) {
+
+  .hidden--table--off {
+    display: block;
+    position: relative;
+    visibility: visible;
+    z-index: 1;
+  }
+
+  .hidden--table--on {
+    display: none;
+    visibility: hidden;
+    position: absolute;
+    z-index: -3;
+  }
 }
 
 @media (min-width: $smPhoneWidth) {}

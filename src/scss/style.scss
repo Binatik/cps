@@ -3,11 +3,11 @@
 @import './utils/mixin.scss';
 @import './utils/global.scss';
 
-@import './modules/header.scss';
-@import './modules/menu.scss';
-
 @import './ui/link.scss';
 @import './ui/title.scss';
 @import './ui/logo.scss';
 @import './ui/chip.scss';
 @import './ui/button.scss';
+
+@import './modules/header.scss';
+@import './modules/menu.scss';
