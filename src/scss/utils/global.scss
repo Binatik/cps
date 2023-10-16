@@ -82,6 +82,13 @@ body {
   }
 }
 
-@media (min-width: $smPhoneWidth) {}
+@media (min-width: $desktopWidth ) {
+  .hidden--desktop--on {
+    display: none;
+    visibility: hidden;
+    position: absolute;
+    z-index: -3;
+  }
+}
 
 @media (min-width: $smPhoneWidth) {}

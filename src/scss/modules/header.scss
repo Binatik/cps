@@ -29,3 +29,11 @@
     justify-content: flex-end;
   }
 }
+
+@media (min-width: $desktopWidth ) {
+  .header {
+    &__main {
+      display: none;
+    }
+  }
+}
