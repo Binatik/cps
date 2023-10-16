@@ -1,5 +1,4 @@
 .header {
-  min-height: 100vh;
 
   &__main {
     position: relative;
@@ -30,10 +29,10 @@
   }
 }
 
-@media (min-width: $desktopWidth ) {
-  .header {
-    &__main {
-      display: none;
-    }
-  }
-}
+// @media (min-width: $desktopWidth ) {
+//   .header {
+//     &__main {
+//       display: none;
+//     }
+//   }
+// }

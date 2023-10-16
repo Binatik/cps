@@ -1,0 +1,38 @@
+.sub-menu {
+  &__container {
+    position: relative;
+    padding: 24px 0;
+  }
+
+  &__title {
+    margin: 0 16px;
+  }
+
+  &__list {
+    overflow-y: auto;
+    display: flex;
+    gap: 0 8px;
+    padding: 0;
+    list-style: none;
+    scrollbar-width: none;
+  }
+
+  &__item:first-child {
+   margin-left: 16px;
+  }
+
+
+  &__list::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+  &__link {
+    white-space: nowrap
+  }
+
+  &__link--active {
+    border: 2px solid $border-lighter;
+    background-color: $default-color;
+  }
+}

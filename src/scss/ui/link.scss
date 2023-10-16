@@ -28,7 +28,7 @@
   color: $light-color;
   border-radius: 6px;
   border: 2px solid transparent;
-  transition: 0.2s border;
+  transition: 0.2s border, 0.2s background-color ;
 } 
 
 .link--mode--mail {
@@ -76,6 +76,7 @@
 
   .link--mode--secondary:hover {
     border: 2px solid $border-lighter;
+    background-color: $default-color;
   }
 
   .link--mode--mail:hover {
