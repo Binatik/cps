@@ -78,3 +78,11 @@
     }
   }
 }
+
+@media (hover: hover) {
+  .sub-menu {
+    &__application:hover .typeparagraph {
+      color: $hover-primary;
+    }
+  }
+}

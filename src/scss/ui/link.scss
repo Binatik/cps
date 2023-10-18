@@ -11,18 +11,6 @@
   transition: 0.2s color;
 } 
 
-// .link--mode--primary::before {
-//  content: '';
-//  position: absolute;
-//  left: 0;
-//  top: 50%;
-//  transform: translate(12px, -50%);
-//  width: 4px;
-//  height: 0;
-//  background-color: transparent;
-//  transition: 0.2s background-color, 0.2s transform, 0.2s height;
-// } 
-
 .link--mode--secondary {
   text-decoration: none;
   color: $light-color;
@@ -67,12 +55,6 @@
   .link--mode--primary:hover {
     color: $hover-primary;
   }
-
-  // .link--mode--primary:hover::before {
-  //   height: 80%;
-  //   background-color: $border-light;
-  //   transform: translate(-19.99px, -50%);
-  // }
 
   .link--mode--secondary:hover {
     border: 2px solid $border-lighter;
