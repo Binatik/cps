@@ -4,8 +4,26 @@
     padding: 24px 0;
   }
 
-  &__title {
+  &__top {
+    display: flex;
     margin: 0 16px;
+  }
+
+  &__title {
+    flex: 1 1 auto;
+    white-space: nowrap;
+  }
+
+  &__right {
+    display: flex;
+    gap: 0 8px;
+    transform: translateY(-95px);
+  }
+
+  &__application {
+    display: flex;
+    gap: 0 8px;
+    align-items: center;
   }
 
   &__list {
@@ -18,7 +36,7 @@
   }
 
   &__item:first-child {
-   margin-left: 16px;
+    margin-left: 16px;
   }
 
 
@@ -34,5 +52,29 @@
   &__link--active {
     border: 2px solid $border-lighter;
     background-color: $default-color;
+  }
+}
+
+@media (min-width: $desktopWidth ) {
+  .sub-menu {
+    &__container {
+      padding: 42px 0;
+    }
+
+    &__top {
+      margin: 0 35px;
+    }
+
+    &__right {
+      gap: 0 32px;
+    }
+
+    &__item:first-child {
+      margin-left: 35px;
+    }
+
+    &__right {
+      transform: translateY(0);
+    }
   }
 }

@@ -84,6 +84,14 @@ body {
     opacity: 0;
     z-index: -3;
   }
+
+  .hidden--desktop--off {
+    display: block;
+    position: relative;
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+  }
 }
 
 @media (min-width: $smPhoneWidth) {}

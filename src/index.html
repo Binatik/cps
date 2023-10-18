@@ -10,7 +10,7 @@
       <div class="header__main container hidden--desktop--on">
         <div class="header__left">
           <button id="open-menu" class="chip chip--mode--primary"></button>
-          <span class="vertical-line hidden hidden--table--off"></span>
+          <span class="header__left-vertical-line vertical-line"></span>
           <a href="#" class="logo">
             <svg class="logo__main logo__main--mode--primary logo__main--size--md" viewBox="0 0 98 53" xmlns="http://www.w3.org/2000/svg">
               <path class="logo__path" fill-rule="evenodd" clip-rule="evenodd" d="M36.8445 1C36.2922 1 35.8445 1.44772 35.8445 2V6.27495C35.8445 6.82724 36.2922 7.27495 36.8445 7.27495H73.1714C83.2984 7.27495 91.2519 15.0716 91.2519 25.1644C91.2519 25.45 91.4834 25.6815 91.7689 25.6815H97.0311C97.3167 25.6815 97.5482 25.45 97.5482 25.1644C97.5482 11.6752 86.7062 1 73.1714 1H36.8445Z" stroke="#80949F" stroke-width="0.5" />
@@ -47,15 +47,15 @@
               />
             </svg>
           </a>
-          <span class="vertical-line hidden--table--on"></span>
         </div>
+        <span class="header__vertical-line vertical-line"></span>
         <div class="header__right">
           <button class="chip chip--mode--primary hidden hidden--table--off"></button>
           <button class="chip chip--mode--primary hidden hidden--table--off"></button>
           <button class="chip chip--mode--primary hidden hidden--table--off"></button>
-          <span class="vertical-line hidden hidden--table--off"></span>
-          <button class="chip chip--mode--primary"></button>
-          <button class="chip chip--mode--primary"></button>
+          <span class="header__right-vertical-line vertical-line hidden hidden--table--off"></span>
+          <button class="header__plug chip chip--mode--primary"></button>
+          <button class="header__plug chip chip--mode--primary"></button>
         </div>
       </div>
       <div class="header__menu menu menu--off">
@@ -141,7 +141,19 @@
     <main class="page">
       <section class="page__sub-menu sub-menu">
         <div class="sub-menu__container container">
-          <h1 class="sub-menu__title title title--mode--primary title--size--extra">Услуги и сервисы</h1>
+          <div class="sub-menu__top">
+            <h1 class="sub-menu__title title title--mode--primary title--size--extra">Услуги и сервисы</h1>
+            <div class="sub-menu__right">
+              <button class="sub-menu__application button button--mode--inline">
+                <span class="typeparagraph--mode--default hidden hidden--desktop--off">Оставить заявку</span>
+                <span class="chip chip--mode--primary"></span>
+              </button>
+              <button class="sub-menu__application button button--mode--inline">
+                <span class="typeparagraph--mode--default hidden hidden--desktop--off">Статус ремонта</span>
+                <span class="chip chip--mode--primary"></span>
+              </button>
+            </div>
+          </div>
           <ul class="sub-menu__list">
             <li class="sub-menu__item">
               <a href="#" class="sub-menu__link sub-menu__link--active link link--mode--secondary link--size--md">Ремонтируемые устройства</a>

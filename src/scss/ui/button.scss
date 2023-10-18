@@ -1,6 +1,7 @@
 .button {
   cursor: pointer;
   letter-spacing: -0.2px;
+  padding: 0;
 }
 
 .button--mode--settings {
@@ -10,6 +11,11 @@
   text-transform: uppercase;
   color: $base-color;
   transition: 0.2s color;
+}
+
+.button--mode--inline {
+  border: none;
+  background-color: transparent;
 }
 
 .button--size--md {
