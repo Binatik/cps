@@ -1,64 +1,54 @@
 .header {
+  position: relative;
 
   &__main {
-    position: relative;
-    padding: 24px 16px;
     background-color: $default-color;
+  }
+
+  &__container {
+    padding: 24px 16px;
     display: grid;
-    align-items: center;
     grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+  }
+
+  &__filler:nth-child(n+2) {
+    visibility: hidden;
+  }
+
+  &__center {
+    margin: 0 auto;
   }
 
   &__left {
     display: flex;
     align-items: center;
-    gap: 0 8px;
-  }
-
-  &__vertical-line {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  &__left-vertical-line {
-    visibility: hidden;
+    gap: 0 16px;
   }
 
   &__right {
     display: flex;
-    align-items: center;
     justify-content: flex-end;
-    gap: 0 8px;
-  }
-
-  &__right-vertical-line {
-    margin: 0 20px;
-  }
-
-  &__search {
-    display: flex;
     align-items: center;
-    justify-content: flex-end;
-  }
-
-  &__plug {
-    visibility: hidden;
+    gap: 0 16px;
   }
 }
 
-@media (min-width: $tableWidth ) {
+@media (min-width: $tableWidth) {
   .header {
 
-    &__left {
-      gap: 0 16px;
-    }
-
     &__vertical-line {
-      visibility: hidden;
+      position: relative;
+      visibility: visible;
+    }   
+     
+    &__right {
+      position: relative;
+      visibility: visible;
     }
 
-    &__left-vertical-line {
-      visibility: visible;
+    &__center {
+      visibility: hidden;
     }
   }
 }
@@ -66,6 +56,12 @@
 @media (min-width: $desktopWidth ) {
   .header {
     &__main {
+      visibility: hidden;
+      position: absolute;
+    }
+
+    &__right {
+      visibility: hidden;
       position: absolute;
     }
   }

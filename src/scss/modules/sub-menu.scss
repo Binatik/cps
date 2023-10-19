@@ -16,8 +16,13 @@
 
   &__right {
     display: flex;
+    align-items: center;
     gap: 0 8px;
     transform: translateY(-95px);
+  }
+
+  &__vertical-line {
+    visibility: hidden;
   }
 
   &__application {
@@ -55,6 +60,15 @@
   }
 }
 
+@media (min-width: $tableWidth ) {
+  .sub-menu {
+    &__vertical-line {
+      visibility: visible;
+      margin: 0 10px;
+    }
+  }
+}
+
 @media (min-width: $desktopWidth ) {
   .sub-menu {
     &__container {
@@ -75,6 +89,16 @@
 
     &__right {
       transform: translateY(0);
+    }
+
+    &__typeparagraph {
+      visibility: visible;
+      position: static;
+    }
+
+    &__vertical-line {
+      visibility: hidden;
+      position: absolute;
     }
   }
 }

@@ -2,9 +2,21 @@ body {
   font-weight: 400;
   font-family: $mainFont;
   background-color: $fon-color;
-  min-height: 5000px;
-  // overflow: hidden;
-  backdrop-filter: blur(5px);
+  height: 3000px;
+}
+
+.page {
+  display: flex;
+}
+
+.page__left {
+  width: 320px;
+  display: none;
+}
+
+.page__right {
+ flex: 1 1 auto;
+ min-width: 0;
 }
 
 .vertical-line {
@@ -19,12 +31,27 @@ body {
   justify-content: center;
 }
 
-.hidden {
+.visibility-hidden {
   visibility: hidden;
   position: absolute;
+}
+
+.blure {
+  visibility: hidden;
+  position: fixed;
   opacity: 0;
-  left: 0;
   top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  transition: 0.2s;
+}
+
+.blure--on {
+  visibility: visible;
+  opacity: 0.9605;
+  background-color: $default-color;
 }
 
 .gradient-left {
@@ -36,61 +63,17 @@ body {
   background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.00) 100%);
 }
 
-.blure {
-  position: absolute;
-  background-color: $default-color;
-  width: 100vw;
-  height: 100vh;
-  left: 0;
-  top: 0;
-  z-index: 1;
-  transition: 0.2s opacity, 0.2s visibility;
-}
-
-.blure--on {
-  visibility: visible;
-  opacity: 0.9605;
-}
-
-.blure--off {
-  visibility: hidden;
-  opacity: 0;
-}
-
 @media (min-width: $tableWidth) {
-
-  .hidden--table--off {
-    display: block;
-    position: relative;
-    visibility: visible;
-    opacity: 1;
-    z-index: 1;
-  }
-
-  .hidden--table--on {
-    display: none;
-    visibility: hidden;
-    position: absolute;
-    opacity: 0;
-    z-index: -3;
-  }
 }
 
 @media (min-width: $desktopWidth ) {
-  .hidden--desktop--on {
-    display: none;
-    visibility: hidden;
-    position: absolute;
-    opacity: 0;
-    z-index: -3;
+  .page__left {
+   display: block;
   }
 
-  .hidden--desktop--off {
-    display: block;
-    position: relative;
-    visibility: visible;
-    opacity: 1;
-    z-index: 1;
+  .blure--off--desktop {
+    visibility: hidden;
+    opacity: 0;
   }
 }
 

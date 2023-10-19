@@ -1,41 +1,34 @@
 function header() {
-  const menu = document.querySelector(".header__menu");
+  const navbar = document.querySelector(".header__navbar");
+  const openNavbar = document.querySelector(".header__open-navbar");
+  const closeNavbar = document.querySelector(".navbar__close-navbar");
   const blure = document.querySelector(".blure");
-  const openMenu = document.querySelector("#open-menu");
-  const closeMenu = document.querySelector("#close-menu");
-  const classMenuOn = "menu--on";
-  const classMenuOff = "menu--off";
-  const classBlureOn = "blure--on";
-  const classBlureOff = "blure--off";
+  const classNavbarOn = "navbar--on";
+  const classNavbarOff = "navbar--off";
   const desktopWidth = 1440;
   const width = document.body.clientWidth;
   
   if (width > desktopWidth) {
-    menu.classList.add(classMenuOn);
-    menu.classList.remove(classMenuOff);
-    blure.classList.add(classBlureOff);
-    blure.classList.remove(classBlureOn);
+    navbar.classList.add(classNavbarOn);
+    navbar.classList.remove(classNavbarOff);
   }
 
-  openMenu.addEventListener("click", () => {
-    menu.classList.add(classMenuOn);
-    menu.classList.remove(classMenuOff);
-    blure.classList.add(classBlureOn);
-    blure.classList.remove(classBlureOff);
+  openNavbar.addEventListener("click", () => {
+    navbar.classList.add(classNavbarOn);
+    navbar.classList.remove(classNavbarOff);
+    blure.classList.add('blure--on')
   });
 
-  closeMenu.addEventListener("click", () => {
-    menu.classList.remove(classMenuOn);
-    menu.classList.add(classMenuOff);
-    blure.classList.add(classBlureOff);
-    blure.classList.remove(classBlureOn);
+  closeNavbar.addEventListener("click", () => {
+    navbar.classList.remove(classNavbarOn);
+    navbar.classList.add(classNavbarOff);
+    blure.classList.remove('blure--on')
   });
 
   blure.addEventListener("click", () => {
-    menu.classList.remove(classMenuOn);
-    menu.classList.add(classMenuOff);
-    blure.classList.add(classBlureOff);
-    blure.classList.remove(classBlureOn);
+    blure.classList.remove('blure--on')
+    navbar.classList.remove(classNavbarOn);
+    navbar.classList.add(classNavbarOff);
   });
 }
 

@@ -1,7 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: {
@@ -29,10 +29,10 @@ module.exports = {
     compress: true,
     hot: true,
 
-    static: {
-      //Показывать статические файлы в папке dist
-      directory: path.join(__dirname, "dist"),
-    },
+    // static: {
+    //   //Показывать статические файлы в папке dist
+    //   directory: path.join(__dirname, "dist"),
+    // },
   },
 
   module: {
@@ -61,9 +61,13 @@ module.exports = {
 
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
-        type: 'asset/resource',
+        type: "asset/resource",
       },
     ],
+  },
+
+  optimization: {
+    minimize: false,
   },
 
   plugins: [
@@ -72,13 +76,11 @@ module.exports = {
     }),
 
     new CopyWebpackPlugin({
-      patterns: [
-        { from: "./src/assets", to: "assets" },
-      ],
+      patterns: [{ from: "./src/assets", to: "assets" }],
     }),
 
     new HtmlWebpackPlugin({
-      title: 'CPS',
+      title: "CPS",
       // templateContent: ({ htmlWebpackPlugin }) => '<!DOCTYPE html><html><head><meta charset="utf-8"><title>' + htmlWebpackPlugin.options.title + '</title></head><body><div id="app"></div></body></html>',
       filename: "index.html",
       template: "./src/index.html",
