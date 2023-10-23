@@ -1,5 +1,4 @@
 function navigation() {
-  // mouseover
   const navigationMarker = document.querySelector(".navigation__marker");
   const navigationLinkActive = document.querySelector(".navigation__link--active");
   const navigationLinks = document.querySelectorAll(".navigation__link");

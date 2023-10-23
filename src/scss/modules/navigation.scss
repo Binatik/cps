@@ -62,7 +62,11 @@
     margin: 0;
   }
 
-  .navigation__marker {
+  &__body {
+    overflow-y: auto;
+  }
+
+  &__marker {
     content: '';
     position: absolute;
     top: 0;
