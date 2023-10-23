@@ -36,7 +36,6 @@ function header() {
 
 ;// CONCATENATED MODULE: ./src/scripts/modules/navigation/navigation.js
 function navigation() {
-  // mouseover
   var navigationMarker = document.querySelector(".navigation__marker");
   var navigationLinkActive = document.querySelector(".navigation__link--active");
   var navigationLinks = document.querySelectorAll(".navigation__link");
