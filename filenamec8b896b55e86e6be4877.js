@@ -34,11 +34,33 @@ function header() {
   });
 }
 
+;// CONCATENATED MODULE: ./src/scripts/modules/navigation/navigation.js
+function navigation() {
+  // mouseover
+  var navigationMarker = document.querySelector(".navigation__marker");
+  var navigationLinkActive = document.querySelector(".navigation__link--active");
+  var navigationLinks = document.querySelectorAll(".navigation__link");
+  document.addEventListener("DOMContentLoaded", function () {
+    navigationMarker.style.top = navigationLinkActive.offsetTop + "px";
+    navigationMarker.style.height = navigationLinkActive.offsetHeight + "px";
+  });
+  navigationLinks.forEach(function (navigationLink) {
+    navigationLink.addEventListener("mouseover", function (event) {
+      navigationMarker.style.top = event.target.offsetTop + "px";
+      navigationMarker.style.height = event.target.offsetHeight + "px";
+    });
+    navigationLink.addEventListener("mouseout", function (event) {
+      navigationMarker.style.top = navigationLinkActive.offsetTop + "px";
+      navigationMarker.style.height = navigationLinkActive.offsetHeight + "px";
+    });
+  });
+}
+
 ;// CONCATENATED MODULE: ./src/scripts/index.js
 
 
 
 header();
-// menu()
+navigation();
 /******/ })()
 ;
