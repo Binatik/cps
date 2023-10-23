@@ -1,7 +1,11 @@
-@import './utils/normolize.scss';
 @import './utils/vars.scss';
 @import './utils/mixin.scss';
+@import './utils/normolize.scss';
 @import './utils/global.scss';
+
+@import './modules/header.scss';
+@import './modules/navigation.scss';
+// @import './modules/sub-menu.scss';
 
 @import './ui/link.scss';
 @import './ui/title.scss';
@@ -9,7 +13,4 @@
 @import './ui/chip.scss';
 @import './ui/button.scss';
 @import './ui/typeparagraph.scss';
-
-@import './modules/header.scss';
-@import './modules/navbar.scss';
-@import './modules/sub-menu.scss';
+@import './ui/separator.scss';

@@ -2,56 +2,19 @@ body {
   font-weight: 400;
   font-family: $mainFont;
   background-color: $fon-color;
-  height: 3000px;
 }
 
-.page {
-  display: flex;
-}
-
-.page__left {
-  width: 320px;
-  display: none;
-}
-
-.page__right {
- flex: 1 1 auto;
- min-width: 0;
-}
-
-.vertical-line {
-  background-color: $border-lightex;
-  width: 2px;
-  height: 32px;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.app {
+  position: relative;
+  min-height: 100vh;
 }
 
 .visibility-hidden {
   visibility: hidden;
   position: absolute;
-}
-
-.blure {
-  visibility: hidden;
-  position: fixed;
-  opacity: 0;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 1;
-  transition: 0.2s;
-}
-
-.blure--on {
-  visibility: visible;
-  opacity: 0.9605;
-  background-color: $default-color;
+  transition: visibility .2s;
 }
 
 .gradient-left {
@@ -63,18 +26,18 @@ body {
   background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.00) 100%);
 }
 
-@media (min-width: $tableWidth) {
-}
+@media (min-width: $smPhoneWidth) {}
+
+@media (min-width: $tableWidth) {}
 
 @media (min-width: $desktopWidth ) {
-  .page__left {
-   display: block;
+  .app {
+    display: flex;
+    justify-content: center;
+    gap: 0 35px;
   }
 
-  .blure--off--desktop {
-    visibility: hidden;
-    opacity: 0;
+  .page__content {
+    width: calc(1440px - 320px); 
   }
 }
-
-@media (min-width: $smPhoneWidth) {}

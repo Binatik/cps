@@ -1,34 +1,38 @@
 function header() {
-  const navbar = document.querySelector(".header__navbar");
-  const openNavbar = document.querySelector(".header__open-navbar");
-  const closeNavbar = document.querySelector(".navbar__close-navbar");
-  const blure = document.querySelector(".blure");
-  const classNavbarOn = "navbar--on";
-  const classNavbarOff = "navbar--off";
+  const headerBurger = document.querySelector(".header__burger");
+  const navigationBurger = document.querySelector(".navigation__burger");
+  const overlay = document.querySelector(".navigation__overlay");
+  const navigation = document.querySelector(".navigation__container");
+
   const desktopWidth = 1440;
   const width = document.body.clientWidth;
-  
-  if (width > desktopWidth) {
-    navbar.classList.add(classNavbarOn);
-    navbar.classList.remove(classNavbarOff);
+
+  function openNavigation() {
+    navigation.classList.add(`navigation__container--open`);
+    overlay.classList.add("navigation__overlay--open");
+    overlay.classList.remove("visibility-hidden");
   }
 
-  openNavbar.addEventListener("click", () => {
-    navbar.classList.add(classNavbarOn);
-    navbar.classList.remove(classNavbarOff);
-    blure.classList.add('blure--on')
+  function closeNavigation() {
+    navigation.classList.remove(`navigation__container--open`);
+    overlay.classList.remove("navigation__overlay--open");
+    overlay.classList.add("visibility-hidden");
+  }
+
+  if (width > desktopWidth) {
+    closeNavigation();
+  }
+
+  headerBurger.addEventListener("click", (event) => {
+    openNavigation();
   });
 
-  closeNavbar.addEventListener("click", () => {
-    navbar.classList.remove(classNavbarOn);
-    navbar.classList.add(classNavbarOff);
-    blure.classList.remove('blure--on')
+  navigationBurger.addEventListener("click", (event) => {
+    closeNavigation();
   });
 
-  blure.addEventListener("click", () => {
-    blure.classList.remove('blure--on')
-    navbar.classList.remove(classNavbarOn);
-    navbar.classList.add(classNavbarOff);
+  overlay.addEventListener("click", (event) => {
+    closeNavigation();
   });
 }
 

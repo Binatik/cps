@@ -1,34 +1,34 @@
 .header {
-  position: relative;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: $default-color;
+  z-index: 5;
 
-  &__main {
-    background-color: $default-color;
-  }
-
-  &__container {
-    padding: 24px 16px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+  &__top-container {
+    display: flex;
     align-items: center;
+    gap: 3px;
+    padding: 24px 16px
   }
 
-  &__filler:nth-child(n+2) {
-    visibility: hidden;
+  &__company {
+    display: flex;
+    align-items: center;
+    gap: 0 8px;
   }
 
-  &__center {
+  &__separator-center {
     margin: 0 auto;
+    height: 32px;
   }
 
-  &__left {
-    display: flex;
-    align-items: center;
-    gap: 0 16px;
+  &__actions {
+    display: none;
   }
 
-  &__right {
+  &__buttons {
     display: flex;
-    justify-content: flex-end;
     align-items: center;
     gap: 0 16px;
   }
@@ -36,33 +36,102 @@
 
 @media (min-width: $tableWidth) {
   .header {
-
-    &__vertical-line {
-      position: relative;
-      visibility: visible;
-    }   
-     
-    &__right {
-      position: relative;
-      visibility: visible;
+    &__company {
+      gap: 0 16px;
     }
 
-    &__center {
-      visibility: hidden;
+    &__separator-company {
+      height: 32px;
+    }
+
+    &__actions {
+      display: flex;
+      align-items: center;
+      gap: 0 16px;
+    }
+
+    &__separator-actions {
+      margin: 0 16px;
+      height: 32px;
+    }
+
+    &__buttons {
+      margin-left: 0;
     }
   }
 }
 
-@media (min-width: $desktopWidth ) {
+@media (min-width: $desktopWidth) {
   .header {
-    &__main {
-      visibility: hidden;
-      position: absolute;
-    }
-
-    &__right {
-      visibility: hidden;
-      position: absolute;
-    }
+    display: none;
   }
 }
+
+// .header {
+//   position: relative;
+
+//   &__main {
+//     background-color: $default-color;
+//   }
+
+//   &__container {
+//     padding: 24px 16px;
+//     display: grid;
+//     grid-template-columns: repeat(3, 1fr);
+//     align-items: center;
+//   }
+
+//   &__filler:nth-child(n+2) {
+//     visibility: hidden;
+//   }
+
+//   &__center {
+//     margin: 0 auto;
+//   }
+
+//   &__left {
+//     display: flex;
+//     align-items: center;
+//     gap: 0 16px;
+//   }
+
+//   &__right {
+//     display: flex;
+//     justify-content: flex-end;
+//     align-items: center;
+//     gap: 0 16px;
+//   }
+// }
+
+// @media (min-width: $tableWidth) {
+//   .header {
+
+//     &__vertical-line {
+//       position: relative;
+//       visibility: visible;
+//     }   
+
+//     &__right {
+//       position: relative;
+//       visibility: visible;
+//     }
+
+//     &__center {
+//       visibility: hidden;
+//     }
+//   }
+// }
+
+// @media (min-width: $desktopWidth ) {
+//   .header {
+//     &__main {
+//       visibility: hidden;
+//       position: absolute;
+//     }
+
+//     &__right {
+//       visibility: hidden;
+//       position: absolute;
+//     }
+//   }
+// }

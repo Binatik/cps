@@ -1,0 +1,132 @@
+.navigation {
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+  z-index: auto;
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $default-color;
+    opacity: 0;
+    z-index: 5;
+    transition: opacity .2s, visibility .2s;
+  }
+
+  &__overlay--open {
+    visibility: visible;
+    opacity: 0.9605;
+  }
+
+  &__container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: $default-color;
+    z-index: 8;
+    transition: left .35s ease-in-out;
+  }
+
+  &__container--open {
+    box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.20);
+    left: 0;
+  }
+
+  &__header-container {
+    display: flex;
+    align-items: center;
+    padding: 24px 16px;
+  }
+
+  &__header-company {
+    display: flex;
+    align-items: center;
+    gap: 0 16px;
+    margin-right: 8px;
+  }
+
+  &__search {
+    margin-left: auto;
+  }
+}
+
+@media (min-width: $tableWidth ) {
+  .navigation {
+    &__container {
+      width: 320px;
+    }
+  }
+}
+
+@media (min-width: $desktopWidth) {
+  .navigation {
+    position: sticky;
+    left: 0;
+    top: 0;
+    width: 320px;
+    
+    &__container {
+      position: static;
+      box-shadow: none;
+    }
+
+    &__burger {
+      //Что бы перебить ui, так как сначала рендрится родитель - modules и только потом ребенок - ui
+      display: none !important;
+    }
+  }
+}
+
+
+
+// .navbar {
+
+
+
+//   &__header-container {
+//     flex-direction: row;
+//     align-items: center;
+//     padding: 24px 16px;
+//   }
+
+//   &__left {
+//     display: flex;
+//     align-items: center;
+//     gap: 0 16px;
+//     flex: 1 1 auto
+//   }
+// }
+
+// // .navbar--on {
+// //   left: 0;
+// //   box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.20);
+// // }
+
+// // .navbar--off {
+// //   left: -100%;
+// //   box-shadow: none;
+// // }
+
+// @media (min-width: $phoneWidth) {
+//   // .navbar {
+//   //   width: 320px;
+//   // }
+// }
+
+// @media (min-width: $desktopWidth ) {
+//   .navbar {
+//     box-shadow: none;
+
+//     &__close-navbar {
+//       visibility: hidden;
+//       position: absolute;
+//     }
+//   }
+// }
