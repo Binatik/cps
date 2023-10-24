@@ -9,12 +9,38 @@ body {
   min-height: 100vh;
 }
 
+.page {
+  position: relative;
+  padding-top: 102px;
+}
+
+.page__block {
+  position: relative;
+  white-space: nowrap;
+  padding: 24px 16px;
+  display: flex;
+  z-index: 5;
+}
+
+.page__actions {
+  display: flex;
+  align-items: center;
+  gap: 0 16px;
+  margin-left: auto;
+  //102 шапка + 40 page__block у шапки 24 отступ у блока тоже 24 102.391+40-24-24
+  transform: translateY(-94.391px);
+}
+
 .visibility-hidden {
   visibility: hidden;
   position: absolute;
   top: 0;
   left: 0;
   transition: visibility .2s;
+}
+
+.hidden {
+  visibility: hidden;
 }
 
 .gradient-left {
@@ -34,10 +60,46 @@ body {
   .app {
     display: flex;
     justify-content: center;
-    gap: 0 35px;
   }
 
-  .page__content {
-    width: calc(1440px - 320px); 
+  .page {
+    position: relative;
+    padding-top: 0;
+
+    .page__block {
+      padding: 42px 30px;
+    }
+
+    &__title::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 4px;
+      height: 32px;
+      background-color: $border-light ;
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+      transform: translate(0, -50%);
+    }
+
+    &__actions {
+      transform: translateY(0);
+    }
+
+    &__content {
+      width: calc(1440px - 320px);
+    }
+
+    &__application {
+      display: flex;
+      align-items: center;
+      gap: 0 8px;
+    }
+
+    &__application-typeparagraph {
+      visibility: visible;
+      position: static;
+    }
   }
 }
