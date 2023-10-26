@@ -110,6 +110,11 @@
     margin: 0;
   }
 
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+  }
+
   &__contacts-link {
     margin-bottom: 12px;
   }
