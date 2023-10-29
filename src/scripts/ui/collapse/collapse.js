@@ -3,11 +3,16 @@ function collapse() {
   const collapses = document.querySelectorAll(".collapse");
   const collapsesFlags = [];
 
+  collapseActions[0].addEventListener('click', (event) => {
+  collapses[0].classList.toggle("collapse--open-mt30");
+  })
+
   collapseActions.forEach((action, index) => {
     collapsesFlags.push(false);
     action.addEventListener("click", (event) => {
       collapses[index].classList.toggle("collapse--open");
-      collapses[0].classList.toggle("mt30");
+
+
       collapsesFlags[index] = !collapsesFlags[index];
 
       if (!collapsesFlags[index]) {
