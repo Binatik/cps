@@ -60,11 +60,13 @@ function collapse() {
   var collapseActions = document.querySelectorAll(".collapse-action");
   var collapses = document.querySelectorAll(".collapse");
   var collapsesFlags = [];
+  collapseActions[0].addEventListener('click', function (event) {
+    collapses[0].classList.toggle("collapse--open-mt30");
+  });
   collapseActions.forEach(function (action, index) {
     collapsesFlags.push(false);
     action.addEventListener("click", function (event) {
       collapses[index].classList.toggle("collapse--open");
-      collapses[0].classList.toggle("mt30");
       collapsesFlags[index] = !collapsesFlags[index];
       if (!collapsesFlags[index]) {
         action.textContent = "Читать далее";
