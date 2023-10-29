@@ -1,0 +1,22 @@
+.collapse {
+  display: grid;
+  grid-template-rows: 0fr;
+  overflow: hidden;
+  transition: 0.3s grid-template-rows, margin-top 0.3s;
+
+  &__typeparagraph {
+    margin: 0;
+    overflow: hidden;
+    min-height: 0;
+  }
+}
+
+.collapse--open {
+  grid-template-rows: 1fr;
+}
+
+.collapse-action {
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+}

@@ -3,10 +3,6 @@
 @import './utils/normolize.scss';
 @import './utils/global.scss';
 
-@import './modules/header.scss';
-@import './modules/navigation.scss';
-@import './modules/slider-menu.scss';
-
 @import './ui/link.scss';
 @import './ui/title.scss';
 @import './ui/logo.scss';
@@ -14,3 +10,10 @@
 @import './ui/button.scss';
 @import './ui/typeparagraph.scss';
 @import './ui/separator.scss';
+@import './ui/collapse.scss';
+@import './ui/picture.scss';
+
+@import './modules/header.scss';
+@import './modules/navigation.scss';
+@import './modules/slider-menu.scss';
+@import './modules/about.scss';

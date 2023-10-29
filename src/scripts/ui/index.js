@@ -1,2 +1,1 @@
-export * from "./title/title";
-export * from "./link/link";
+export * from "./collapse/collapse";
