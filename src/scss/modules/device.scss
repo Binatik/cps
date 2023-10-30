@@ -1,0 +1,10 @@
+.device {
+  &__container {
+    margin-top: 24px;
+  }
+
+  &__inner {
+    background: linear-gradient(90deg, #F8F8F8 1.39%, #FFF 100%);
+    padding: 16px 20px;
+  }
+}

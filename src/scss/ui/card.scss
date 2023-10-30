@@ -1,0 +1,13 @@
+.card {
+  &__link {
+    margin-left: auto;
+  }
+}
+
+.card--mode--primary {
+  display: flex;
+  align-items: center;
+  background-color: $default-color;
+  border: 1px solid $border-lightex;
+  border-radius: 6px;
+}
