@@ -9390,7 +9390,7 @@ function collapse() {
       var dataset = action.dataset.open;
       collapses[index].classList.toggle("collapse--open");
       collapsesFlags[index] = !collapsesFlags[index];
-      if (!collapsesFlags[index]) {
+      if (!collapsesFlags[index] && dataset === 'content') {
         action.textContent = "Показать все";
         return;
       }
