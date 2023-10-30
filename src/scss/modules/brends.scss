@@ -36,3 +36,38 @@
     background-color: $pagination-active;
   }
 }
+
+@media (min-width: $tableWidth) {
+  .brands {
+
+    &__container {
+      margin-top: 30px;
+      padding: 0 16px;
+    }
+
+    &__inner {
+      background: linear-gradient(90deg, #F8F8F8 1.39%, #FFF 100%);
+      padding: 16px 0;
+      border-top: 1px solid #D9FFF5;
+    }
+
+    &__swiper-wrapper.swiper-wrapper {
+      display: grid;
+      gap: 16px 12px;
+      grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+      transform: translate3d(0px, 0, 0) !important;
+    }
+
+    &__slide {
+      width: 100% !important;
+    }
+
+    &__pagination .swiper-pagination-bullet {
+      display: none;
+    }
+
+    &__card-container {
+      margin-left: 0;
+    }
+  }
+}

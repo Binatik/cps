@@ -8,8 +8,15 @@ function brands() {
     // Optional parameters
     modules: [Pagination],
     loop: true,
-    slidesPerView: 1.25,
+    breakpoints: {
+      320: {
+        slidesPerView: 1.25
+      },
 
+      576: {
+        slidesPerView: 2
+      }
+    },
     // If we need pagination
     pagination: {
       el: ".swiper-pagination",
