@@ -10,12 +10,18 @@ function collapse() {
   collapseActions.forEach((action, index) => {
     collapsesFlags.push(false);
     action.addEventListener("click", (event) => {
+      const dataset = action.dataset.open
       collapses[index].classList.toggle("collapse--open");
 
 
       collapsesFlags[index] = !collapsesFlags[index];
 
       if (!collapsesFlags[index]) {
+        action.textContent = "Показать все";
+        return;
+      }
+
+      if (!collapsesFlags[index] && dataset === 'typeparagraph') {
         action.textContent = "Читать далее";
         return;
       }

@@ -24,6 +24,10 @@
     margin-left: 20px;
   }
 
+  &__collapse-action {
+    display: none;
+  }
+
   &__pagination .swiper-pagination-bullet {
     opacity: 1;
     width: 14px;
@@ -56,10 +60,15 @@
       gap: 16px 12px;
       grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
       transform: translate3d(0px, 0, 0) !important;
+      margin-bottom: 16px;
     }
 
     &__slide {
       width: 100% !important;
+    }
+
+    &__slide:nth-child(n+9) {
+      display: none;
     }
 
     &__pagination .swiper-pagination-bullet {
@@ -68,6 +77,17 @@
 
     &__card-container {
       margin-left: 0;
+    }
+
+    &__collapse-container {
+      display: grid;
+      gap: 16px 12px;
+      grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+      margin-bottom: 16px;
+    }
+
+    &__collapse-action {
+      display: inline-block;
     }
   }
 }

@@ -203,9 +203,9 @@
             <div class="about__content">
               <p class="about__description typeparagraph typeparagraph--mode--collapse">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
               <div class="about__collapse collapse">
-                <p class="collapse__typeparagraph typeparagraph typeparagraph--mode--collapse">Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</p>
+                <p class="collapse__container typeparagraph typeparagraph--mode--collapse">Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</p>
               </div>
-              <button class="collapse-action button button--size--md">Читать далее</button>
+              <button data-open="typeparagraph" class="collapse-action button button--size--md">Читать далее</button>
             </div>
             <div class="about__picture picture">
               <img class="picture__content picture__content--mode--default" src="./assets/images/about.png" alt="about" />
@@ -273,6 +273,37 @@
                 </div>
               </div>
               <div class="swiper-pagination brands__pagination"></div>
+              
+              <!-- //Коллапсу требуется контейнер, это не просто уменьшение высоты, не придумал как в swiper загнать! -->
+              <div class="brands__collapse collapse">
+                <div class="collapse__container brands__collapse-container">
+                  <div class="brands__card-container card card--mode--primary">
+                    <img src="./assets/images/samsung.png" alt="samsung">
+                    <a class="link link-mode-paper chip chip--mode--danger card__link"></a>
+                  </div>
+                  <div class="brands__card-container card card--mode--primary">
+                    <img src="./assets/images/samsung.png" alt="samsung">
+                    <a class="link link-mode-paper chip chip--mode--danger card__link"></a>
+                  </div>
+                  <div class="brands__card-container card card--mode--primary">
+                    <img src="./assets/images/samsung.png" alt="samsung">
+                    <a class="link link-mode-paper chip chip--mode--danger card__link"></a>
+                  </div>
+                  <div class="brands__card-container card card--mode--primary">
+                    <img src="./assets/images/samsung.png" alt="samsung">
+                    <a class="link link-mode-paper chip chip--mode--danger card__link"></a>
+                  </div>
+                  <div class="brands__card-container card card--mode--primary">
+                    <img src="./assets/images/samsung.png" alt="samsung">
+                    <a class="link link-mode-paper chip chip--mode--danger card__link"></a>
+                  </div>
+                  <div class="brands__card-container card card--mode--primary">
+                    <img src="./assets/images/samsung.png" alt="samsung">
+                    <a class="link link-mode-paper chip chip--mode--danger card__link"></a>
+                  </div>
+                </div>
+              </div>
+              <button data-open="content" class="collapse-action brands__collapse-action button button--size--md">Показать все</button>
             </div>
           </div>
         </section>
