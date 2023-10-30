@@ -16,7 +16,7 @@ function collapse() {
 
       collapsesFlags[index] = !collapsesFlags[index];
 
-      if (!collapsesFlags[index]) {
+      if (!collapsesFlags[index] && dataset === 'content') {
         action.textContent = "Показать все";
         return;
       }
