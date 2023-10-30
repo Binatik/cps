@@ -9387,9 +9387,14 @@ function collapse() {
   collapseActions.forEach(function (action, index) {
     collapsesFlags.push(false);
     action.addEventListener("click", function (event) {
+      var dataset = action.dataset.open;
       collapses[index].classList.toggle("collapse--open");
       collapsesFlags[index] = !collapsesFlags[index];
       if (!collapsesFlags[index]) {
+        action.textContent = "Показать все";
+        return;
+      }
+      if (!collapsesFlags[index] && dataset === 'typeparagraph') {
         action.textContent = "Читать далее";
         return;
       }
