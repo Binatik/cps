@@ -4,6 +4,10 @@
   letter-spacing: -0.2px;
 }
 
+.link--mode--inline {
+  text-decoration: none;
+}
+
 .link--mode--primary {
   text-decoration: none;
   color: $base-color;

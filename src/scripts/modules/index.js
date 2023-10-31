@@ -1,3 +1,3 @@
 export * from "./header/header";
 export * from "./navigation/navigation";
-export * from "./brand/brand"
+export * from "./slider/slider";

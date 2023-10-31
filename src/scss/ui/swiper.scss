@@ -16,7 +16,7 @@
   opacity: 1;
   width: 12px;
   height: 12px;
-  transform: scale(1);
+  transform: scale(1) !important;
   background-color: $pagination-base;
 }
 

@@ -1,10 +1,73 @@
 .device {
-  &__container {
-    margin-top: 24px;
+  &__content-container {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border-top: 1px solid $border-lite;
+    background: linear-gradient(90deg, #F8F8F8 1.39%, #FFF 100%);
+    padding: 0 20px;
   }
 
-  &__inner {
-    background: linear-gradient(90deg, #F8F8F8 1.39%, #FFF 100%);
-    padding: 16px 20px;
+  &__container {
+    padding-left: 16px;
+  }
+
+  &__swiper-wrapper {
+    padding-bottom: 35px;
+  }
+
+  &__card {
+    min-height: 160px;
+    padding: 16px;
+  }
+
+  &__title {
+    align-self: flex-start;
+    text-transform: none;
+    font-weight: 500;
+  }
+
+  &__route {
+    align-self: flex-end;
+    margin-left: auto;
+  }
+}
+
+@media (min-width: $tableWidth) {
+  .device {
+    &__swiper-wrapper {
+      padding-bottom: 0;
+      flex-wrap: wrap;
+      gap: 16px 24px;
+    }
+
+    &__slide {
+      width: calc(100% / 3 - 24px) !important;
+    }
+
+    &__slide:nth-child(n+7) {
+      display: none;
+    }
+
+    &__collapse-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px 24px;
+    }
+
+    &__collapse-action {
+      display: block;
+    }
+  }
+}
+
+@media (min-width: $desktopWidth) {
+  .device {
+    &__slide {
+      width: calc(100% / 4 - 24px) !important;
+    }
+
+    &__slide:nth-child(n+5) {
+      display: none;
+    }
   }
 }
