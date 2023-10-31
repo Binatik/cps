@@ -9344,30 +9344,39 @@ function EffectCards(_ref) {
 
 
 
-;// CONCATENATED MODULE: ./src/scripts/modules/brands/brands.js
+;// CONCATENATED MODULE: ./src/scripts/modules/slider/slider.js
 
 
 
 
-function brands() {
-  new Swiper(".brands__swiper", {
-    // Optional parameters
+function slider() {
+  return new Swiper(".swiper-primary", {
     modules: [Pagination],
-    loop: true,
-    breakpoints: {
-      320: {
-        slidesPerView: 1.25
-      },
-      576: {
-        slidesPerView: 2
-      }
-    },
-    // If we need pagination
     pagination: {
       el: ".swiper-pagination",
       dynamicBullets: true,
       dynamicMainBullets: 7,
       clickable: true
+    },
+    breakpoints: {
+      320: {
+        enabled: true,
+        loop: true,
+        spaceBetween: 16,
+        slidesPerView: 1.25
+      },
+      576: {
+        enabled: true,
+        loop: true,
+        spaceBetween: 16,
+        slidesPerView: 2
+      },
+      768: {
+        enabled: false,
+        loop: false,
+        spaceBetween: 0,
+        slidesPerView: "auto"
+      }
     }
   });
 }
@@ -9408,9 +9417,12 @@ function collapse() {
 
 
 
-header();
-navigation();
-collapse();
-brands();
+function initialization() {
+  header();
+  navigation();
+  slider();
+  collapse();
+}
+initialization();
 /******/ })()
 ;
