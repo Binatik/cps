@@ -9363,7 +9363,7 @@ function slider() {
         enabled: true,
         loop: true,
         spaceBetween: 16,
-        slidesPerView: 1.25
+        slidesPerView: 1.20
       },
       576: {
         enabled: true,
