@@ -1,7 +1,21 @@
 .button {
   cursor: pointer;
-  letter-spacing: -0.2px;
   padding: 0;
+}
+
+.button--mode--danger {
+  border: none;
+  color: $default-color ;
+  background-color: $danger-color;
+  border-radius: 16px;
+  transition: 0.2s color, 0.2s background-color;
+}
+
+.button--mode--inline {
+  display: flex;
+  align-items: center;
+  border: none;
+  background-color: transparent;
 }
 
 .button--mode--settings {
@@ -13,19 +27,26 @@
   transition: 0.2s color;
 }
 
-.button--mode--inline {
-  border: none;
-  background-color: transparent;
-}
-
 .button--size--md {
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.5rem;
 }
 
+.button--size--small {
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+}
+
 @media (hover: hover) {
   .button--mode--settings:hover {
     color: $hover-primary;
+  }
+}
+
+@media (hover: hover) {
+  .button--mode--danger:hover {
+    background-color: $danger-color-800;
   }
 }

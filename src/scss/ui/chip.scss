@@ -12,6 +12,7 @@
   height: 40px;
   border-radius: 50%;
   background-color: $danger-color;
+  transition: 0.2s background-color;
 }
 
 .chip--mode--danger {
@@ -19,4 +20,10 @@
   height: 40px;
   border-radius: 50%;
   border: 2px solid $danger-color;
+}
+
+@media (hover: hover) {
+  .chip--mode--primary:hover {
+    background-color: $danger-color-800;
+  }
 }

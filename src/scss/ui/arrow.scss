@@ -2,7 +2,11 @@
   fill: $danger-color;
 }
 
+.arrow--mode--default {
+  fill: $default-color;
+}
+
 .arrow--size--md {
-  width: 14px;
-  height: 14px;
+  width: 30px;
+  height: 30px;
 }
