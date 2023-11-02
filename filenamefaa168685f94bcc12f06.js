@@ -9423,7 +9423,7 @@ function collapse() {
 
 ;// CONCATENATED MODULE: ./src/scripts/page/index.js
 function index() {
-  var actionSupport = document.querySelector('[data-openDialog="support"]');
+  var actionSupportAll = document.querySelectorAll('[data-openDialog="support"]');
   var actionForm = document.querySelector('[data-openDialog="form"]');
   var closeSideBarAll = document.querySelectorAll(".sidebar__button-close");
   var sidebarContainer = document.querySelectorAll('.sidebar__container');
@@ -9433,10 +9433,12 @@ function index() {
     overlay.classList.add("sidebar__overlay--open");
     overlay.classList.remove("visibility-hidden");
   });
-  actionSupport.addEventListener('click', function (event) {
-    sidebarContainer[1].classList.add("sidebar__container--open");
-    overlay.classList.add("sidebar__overlay--open");
-    overlay.classList.remove("visibility-hidden");
+  actionSupportAll.forEach(function (actionSupport) {
+    actionSupport.addEventListener('click', function (event) {
+      sidebarContainer[1].classList.add("sidebar__container--open");
+      overlay.classList.add("sidebar__overlay--open");
+      overlay.classList.remove("visibility-hidden");
+    });
   });
   closeSideBarAll.forEach(function (closeSideBar, index) {
     closeSideBar.addEventListener('click', function (event) {
