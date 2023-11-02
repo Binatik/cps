@@ -1,12 +1,11 @@
 # CPS - Ремонт техники
 
 ---
-
-<!-- <img width="1162" alt="image" src="https://github.com/Binatik/images/assets/47430210/3a87ec04-64aa-4626-9a2c-2d8830b7d632"> -->
+<img width="1162" alt="image" src="https://github.com/Binatik/images/assets/47430210/f1b24cdb-f226-42e3-8c7b-e8b3539968aa">
 
 ## Проверить
 
-Проверить последнюю версию web приложения пока невозможно. `CI/CD` временно недоступен.
+Проверить последнюю версию web приложения можно [здесь](https://binatik.github.io/cps/).
 
 ## Сборка
 Веб упаковка была выполнена при помощи `webpack` используя настройку из `webpack.config`
@@ -55,6 +54,8 @@ use: {
   },
 },
 ```
+
+`Поддержка Ege, Chrome, Yandex последних версий`
 
 
 

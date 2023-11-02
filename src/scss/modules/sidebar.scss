@@ -1,0 +1,60 @@
+.sidebar {
+  position: absolute;
+  width: 100%;
+  z-index: auto;
+
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $default-color;
+    opacity: 0;
+    z-index: 6;
+    transition: opacity .2s, visibility .2s;
+  }
+
+  &__overlay--open {
+    visibility: visible;
+    opacity: 0.9605;
+  }
+
+  &__container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: $default-color;
+    z-index: 6;
+    transition: right .35s ease-in-out;
+  }
+
+  &__container--open {
+    right: 0
+  }
+
+  &__form-container {
+    position: relative;
+    padding: 24px 16px 0 16px;
+  }
+
+  &__button-close {
+    position: relative;
+  }
+
+  &__title {
+    margin-top: 40px;
+  }
+}
+
+@media (min-width: $tableWidth ) {
+  .sidebar {
+    &__container {
+      width: 420px;
+    }
+  }
+}
