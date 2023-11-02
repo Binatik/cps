@@ -1,5 +1,5 @@
 function index() {
-  const actionSupport = document.querySelector('[data-openDialog="support"]');
+  const actionSupportAll = document.querySelectorAll('[data-openDialog="support"]');
   const actionForm = document.querySelector('[data-openDialog="form"]');
 
   const closeSideBarAll = document.querySelectorAll(".sidebar__button-close");
@@ -12,10 +12,12 @@ function index() {
     overlay.classList.remove("visibility-hidden");
   })
 
-  actionSupport.addEventListener('click',(event) => {
-    sidebarContainer[1].classList.add(`sidebar__container--open`);
-    overlay.classList.add("sidebar__overlay--open");
-    overlay.classList.remove("visibility-hidden");
+  actionSupportAll.forEach((actionSupport) => {
+    actionSupport.addEventListener('click',(event) => {
+      sidebarContainer[1].classList.add(`sidebar__container--open`);
+      overlay.classList.add("sidebar__overlay--open");
+      overlay.classList.remove("visibility-hidden");
+    })
   })
 
   closeSideBarAll.forEach((closeSideBar, index) => {
