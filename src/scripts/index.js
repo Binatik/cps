@@ -10,7 +10,6 @@ function initialization() {
   navigation()
   slider()
   collapse()
-  sidebar()
 }
 initialization()
 

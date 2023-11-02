@@ -11,7 +11,7 @@
     height: 100%;
     background-color: $default-color;
     opacity: 0;
-    z-index: 6;
+    z-index: 10;
     transition: opacity .2s, visibility .2s;
   }
 
@@ -29,12 +29,13 @@
     width: 100%;
     height: 100%;
     background-color: $default-color;
-    z-index: 6;
+    z-index: 10;
     transition: right .35s ease-in-out;
   }
 
   &__container--open {
-    right: 0
+    right: 0;
+    box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.20);
   }
 
   &__form-container {
