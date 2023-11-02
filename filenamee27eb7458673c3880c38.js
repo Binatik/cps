@@ -4,6 +4,7 @@ var __webpack_exports__ = {};
 
 ;// CONCATENATED MODULE: ./src/scripts/modules/header/header.js
 function header() {
+  var burgerLines = document.querySelectorAll(".burger__line");
   var headerBurger = document.querySelector(".header__burger");
   var navigationBurger = document.querySelector(".navigation__burger");
   var overlay = document.querySelector(".navigation__overlay");
@@ -14,11 +15,19 @@ function header() {
     navigation.classList.add("navigation__container--open");
     overlay.classList.add("navigation__overlay--open");
     overlay.classList.remove("visibility-hidden");
+
+    //В бургере 3 линии. 0-2 (цикл не нужен)
+    burgerLines[0].classList.add('active');
+    burgerLines[1].classList.add('active');
+    burgerLines[2].classList.add('active');
   }
   function closeNavigation() {
     navigation.classList.remove("navigation__container--open");
     overlay.classList.remove("navigation__overlay--open");
     overlay.classList.add("visibility-hidden");
+    burgerLines[0].classList.remove('active');
+    burgerLines[1].classList.remove('active');
+    burgerLines[2].classList.remove('active');
   }
   if (width > desktopWidth) {
     closeNavigation();
@@ -9381,7 +9390,25 @@ function slider() {
   });
 }
 
+;// CONCATENATED MODULE: ./src/scripts/modules/sidebar/sidebar.js
+function sidebar() {
+  var sidebar = document.querySelector(".sidebar__container");
+  var closeSidebar = document.querySelector(".sidebar__button-close");
+  var overlay = document.querySelector(".sidebar__overlay");
+  closeSidebar.addEventListener('click', function (event) {
+    sidebar.classList.remove("sidebar__container--open");
+    overlay.classList.remove("sidebar__overlay--open");
+    overlay.classList.add("visibility-hidden");
+  });
+  overlay.addEventListener('click', function (event) {
+    overlay.classList.remove("sidebar__overlay--open");
+    sidebar.classList.remove("sidebar__container--open");
+    overlay.classList.add("visibility-hidden");
+  });
+}
+
 ;// CONCATENATED MODULE: ./src/scripts/modules/index.js
+
 
 
 
@@ -9412,16 +9439,31 @@ function collapse() {
   });
 }
 
+;// CONCATENATED MODULE: ./src/scripts/page/index.js
+function index() {
+  var sidebar = document.querySelector(".sidebar__container");
+  var actionSidebar = document.querySelector(".page__action-sidebar");
+  var overlay = document.querySelector(".sidebar__overlay");
+  actionSidebar.addEventListener('click', function (event) {
+    sidebar.classList.add("sidebar__container--open");
+    overlay.classList.add("sidebar__overlay--open");
+    overlay.classList.remove("visibility-hidden");
+  });
+}
+
 ;// CONCATENATED MODULE: ./src/scripts/index.js
 
 
 
 
+
 function initialization() {
+  index();
   header();
   navigation();
   slider();
   collapse();
+  sidebar();
 }
 initialization();
 /******/ })()
