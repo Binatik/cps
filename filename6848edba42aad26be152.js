@@ -9390,25 +9390,7 @@ function slider() {
   });
 }
 
-;// CONCATENATED MODULE: ./src/scripts/modules/sidebar/sidebar.js
-function sidebar() {
-  var sidebar = document.querySelector(".sidebar__container");
-  var closeSidebar = document.querySelector(".sidebar__button-close");
-  var overlay = document.querySelector(".sidebar__overlay");
-  closeSidebar.addEventListener('click', function (event) {
-    sidebar.classList.remove("sidebar__container--open");
-    overlay.classList.remove("sidebar__overlay--open");
-    overlay.classList.add("visibility-hidden");
-  });
-  overlay.addEventListener('click', function (event) {
-    overlay.classList.remove("sidebar__overlay--open");
-    sidebar.classList.remove("sidebar__container--open");
-    overlay.classList.add("visibility-hidden");
-  });
-}
-
 ;// CONCATENATED MODULE: ./src/scripts/modules/index.js
-
 
 
 
@@ -9441,13 +9423,32 @@ function collapse() {
 
 ;// CONCATENATED MODULE: ./src/scripts/page/index.js
 function index() {
-  var sidebar = document.querySelector(".sidebar__container");
-  var actionSidebar = document.querySelector(".page__action-sidebar");
+  var actionSupport = document.querySelector('[data-openDialog="support"]');
+  var actionForm = document.querySelector('[data-openDialog="form"]');
+  var closeSideBarAll = document.querySelectorAll(".sidebar__button-close");
+  var sidebarContainer = document.querySelectorAll('.sidebar__container');
   var overlay = document.querySelector(".sidebar__overlay");
-  actionSidebar.addEventListener('click', function (event) {
-    sidebar.classList.add("sidebar__container--open");
+  actionForm.addEventListener('click', function (event) {
+    sidebarContainer[0].classList.add("sidebar__container--open");
     overlay.classList.add("sidebar__overlay--open");
     overlay.classList.remove("visibility-hidden");
+  });
+  actionSupport.addEventListener('click', function (event) {
+    sidebarContainer[1].classList.add("sidebar__container--open");
+    overlay.classList.add("sidebar__overlay--open");
+    overlay.classList.remove("visibility-hidden");
+  });
+  closeSideBarAll.forEach(function (closeSideBar, index) {
+    closeSideBar.addEventListener('click', function (event) {
+      sidebarContainer[index].classList.remove("sidebar__container--open");
+      overlay.classList.remove("sidebar__overlay--open");
+      overlay.classList.add("visibility-hidden");
+    });
+    overlay.addEventListener('click', function (event) {
+      sidebarContainer[index].classList.remove("sidebar__container--open");
+      overlay.classList.remove("sidebar__overlay--open");
+      overlay.classList.add("visibility-hidden");
+    });
   });
 }
 
@@ -9463,7 +9464,6 @@ function initialization() {
   navigation();
   slider();
   collapse();
-  sidebar();
 }
 initialization();
 /******/ })()
