@@ -8,11 +8,9 @@
     padding: 0 20px;
   }
 
-  &__container {
-    padding-left: 16px;
-  }
-
   &__swiper-wrapper {
+    padding-left: 16px;
+    padding-right: 16px;
     padding-bottom: 35px;
   }
 
@@ -67,6 +65,8 @@
   }
 
   &__information {
+    padding-left: 16px;
+    padding-right: 16px;
     margin-top: 24px;
     max-width: 421px;
     display: flex;
@@ -77,6 +77,17 @@
 
 @media (min-width: $tableWidth) {
   .service {
+
+    &__container {
+      padding: 20px;
+    }
+
+    &__swiper-wrapper {
+      padding: 0;
+      flex-wrap: wrap;
+      gap: 16px 24px;
+    }
+
     &__slide {
       display: none !important;
     }
@@ -88,6 +99,10 @@
 
     &__typeparagraph {
       max-width: 100%;
+    }
+
+    &__information {
+      padding: 0;
     }
   }
 }

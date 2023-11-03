@@ -7,11 +7,9 @@
     padding: 0 20px;
   }
 
-  &__container {
-    padding-left: 16px;
-  }
-
   &__swiper-wrapper {
+    padding-left: 16px;
+    padding-right: 16px;
     padding-bottom: 35px;
   }
 
@@ -34,8 +32,12 @@
 
 @media (min-width: $tableWidth) {
   .device {
+    &__container {
+      padding: 20px;
+    }
+
     &__swiper-wrapper {
-      padding-bottom: 0;
+      padding: 0;
       flex-wrap: wrap;
       gap: 16px 24px;
     }
