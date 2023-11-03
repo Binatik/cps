@@ -49,6 +49,10 @@ body {
     transform: translate(-16px, 30px);
     z-index: 5;
   }
+
+  &__application-svg {
+    transform: scale(0.9);
+  }
 }
 
 .visibility-hidden {
@@ -64,7 +68,7 @@ body {
 }
 
 .fade-left {
-  position: fixed;
+  position: absolute;
   right: 0;
   top: 0;
   width: 24px;
@@ -75,7 +79,11 @@ body {
 
 @media (min-width: $smPhoneWidth) {}
 
-@media (min-width: $tableWidth) {}
+@media (min-width: $tableWidth) {
+  .fade-left--table--off {
+    display: none;
+  }
+}
 
 @media (min-width: $desktopWidth ) {
   .app {

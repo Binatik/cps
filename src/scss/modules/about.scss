@@ -1,6 +1,9 @@
 .about {
   &__container {
     margin-top: 32px;
+  }
+
+  &__content {
     padding: 0 20px;
   }
 
@@ -10,12 +13,12 @@
 
   &__picture {
     margin-top: 12px;
-    border-radius: 10px;
   }
- }
+}
 
- @media (min-width: $tableWidth ) {
+@media (min-width: $tableWidth ) {
   .about {
+
     &__container {
       display: flex;
       align-items: center;
@@ -24,12 +27,18 @@
     }
 
     &__content {
+      padding: 0 20px;
+    }
+
+    &__content {
       align-self: flex-start;
       width: 50%;
+      padding: 0;
     }
 
     &__picture {
       width: 50%;
+      border-radius: 10px;
     }
   }
 }

@@ -4,6 +4,7 @@
   width: 100%;
   background-color: $default-color;
   z-index: 5;
+  border-bottom: 1px solid $border-lite;
 
   &__top-container {
     display: flex;

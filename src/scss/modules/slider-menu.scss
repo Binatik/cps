@@ -1,9 +1,11 @@
 .slider-menu {
   &__container {
+    position: relative;
     padding-top: 24px;
   }
 
   &__list {
+    position: relative;
     overflow-y: auto;
     display: flex;
     gap: 8px 1px;
