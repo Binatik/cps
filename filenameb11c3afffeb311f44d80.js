@@ -9423,18 +9423,23 @@ function collapse() {
 
 ;// CONCATENATED MODULE: ./src/scripts/page/index.js
 function index() {
-  var actionSupportAll = document.querySelectorAll('[data-openDialog="support"]');
-  var actionForm = document.querySelector('[data-openDialog="form"]');
+  // chat - обратная связь
+  // consultation - заказать звонок
+
+  var actionDialogConsultationAll = document.querySelectorAll('[data-openDialog="consultation"]');
+  var actionChatAll = document.querySelectorAll('[data-openDialog="chat"]');
   var closeSideBarAll = document.querySelectorAll(".sidebar__button-close");
   var sidebarContainer = document.querySelectorAll('.sidebar__container');
   var overlay = document.querySelector(".sidebar__overlay");
-  actionForm.addEventListener('click', function (event) {
-    sidebarContainer[0].classList.add("sidebar__container--open");
-    overlay.classList.add("sidebar__overlay--open");
-    overlay.classList.remove("visibility-hidden");
+  actionDialogConsultationAll.forEach(function (actionDialogConsultation) {
+    actionDialogConsultation.addEventListener('click', function (event) {
+      sidebarContainer[0].classList.add("sidebar__container--open");
+      overlay.classList.add("sidebar__overlay--open");
+      overlay.classList.remove("visibility-hidden");
+    });
   });
-  actionSupportAll.forEach(function (actionSupport) {
-    actionSupport.addEventListener('click', function (event) {
+  actionChatAll.forEach(function (actionChat) {
+    actionChat.addEventListener('click', function (event) {
       sidebarContainer[1].classList.add("sidebar__container--open");
       overlay.classList.add("sidebar__overlay--open");
       overlay.classList.remove("visibility-hidden");
