@@ -1,19 +1,25 @@
 function index() {
-  const actionSupportAll = document.querySelectorAll('[data-openDialog="support"]');
-  const actionForm = document.querySelector('[data-openDialog="form"]');
+  // chat - обратная связь
+  // consultation - заказать звонок
 
+
+  const actionDialogConsultationAll = document.querySelectorAll('[data-openDialog="consultation"]');
+  const actionChatAll = document.querySelectorAll('[data-openDialog="chat"]');
   const closeSideBarAll = document.querySelectorAll(".sidebar__button-close");
   const sidebarContainer = document.querySelectorAll('.sidebar__container')
   const overlay = document.querySelector(".sidebar__overlay");
 
-  actionForm.addEventListener('click',(event) => {
-    sidebarContainer[0].classList.add(`sidebar__container--open`);
-    overlay.classList.add("sidebar__overlay--open");
-    overlay.classList.remove("visibility-hidden");
+
+  actionDialogConsultationAll.forEach((actionDialogConsultation) => {
+    actionDialogConsultation.addEventListener('click',(event) => {
+      sidebarContainer[0].classList.add(`sidebar__container--open`);
+      overlay.classList.add("sidebar__overlay--open");
+      overlay.classList.remove("visibility-hidden");
+    })
   })
 
-  actionSupportAll.forEach((actionSupport) => {
-    actionSupport.addEventListener('click',(event) => {
+  actionChatAll.forEach((actionChat) => {
+    actionChat.addEventListener('click',(event) => {
       sidebarContainer[1].classList.add(`sidebar__container--open`);
       overlay.classList.add("sidebar__overlay--open");
       overlay.classList.remove("visibility-hidden");

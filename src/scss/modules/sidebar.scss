@@ -57,5 +57,15 @@
     &__container {
       width: 420px;
     }
+
+    &__title {
+      margin-top: calc(40px - 24px);
+    }
+
+    &__button-close {
+      position: absolute;
+      left: -74px;
+      top: 40px;
+    }
   }
 }
