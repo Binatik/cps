@@ -12,6 +12,13 @@
   letter-spacing: -0.2px;
 }
 
+.typeparagraph--mode--warning {
+  color: $neutral-regular;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1rem;
+}
+
 .typeparagraph--mode--collapse {
   color: $base-color;
   font-size: 0.937rem;
