@@ -1,15 +1,16 @@
 import '../scss/utils/fonts.scss'
 import '../scss/style.scss'
-import { header, navigation, sidebar, slider } from './modules'
 import { collapse } from './ui'
+import { navigation, slider } from './modules'
+import { header } from './loyout'
 import { index } from './page'
 
 function initialization() {
-  index()
-  header()
+  collapse()
   navigation()
   slider()
-  collapse()
+  header()
+  index()
 }
 initialization()
 

@@ -18,11 +18,16 @@
 @import './ui/card.scss';
 @import './ui/arrow.scss';
 
-@import './modules/header.scss';
 @import './modules/navigation.scss';
 @import './modules/slider-menu.scss';
 @import './modules/about.scss';
 @import './modules/brend.scss';
 @import './modules/device.scss';
 @import './modules/service.scss';
-@import './modules/sidebar.scss';
+
+@import './loyout/sidebar.scss';
+@import './loyout/header.scss';
+@import './loyout/footer.scss';
+
+@import './page/main.scss';
+
