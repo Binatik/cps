@@ -11,21 +11,22 @@ function collapse() {
     collapsesFlags.push(false);
     action.addEventListener("click", (event) => {
       const dataset = action.dataset.open
+      const text = action.querySelector('.collapse--text')
       collapses[index].classList.toggle("collapse--open");
 
 
       collapsesFlags[index] = !collapsesFlags[index];
 
       if (!collapsesFlags[index] && dataset === 'content') {
-        action.textContent = "Показать все";
+        text.textContent = "Показать все";
         return;
       }
 
       if (!collapsesFlags[index] && dataset === 'typeparagraph') {
-        action.textContent = "Читать далее";
+        text.textContent = "Читать далее";
         return;
       }
-      action.textContent = "Cвернуть";
+      text.textContent = "Cвернуть";
     });
   });
 }

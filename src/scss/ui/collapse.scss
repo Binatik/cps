@@ -20,7 +20,9 @@
 }
 
 .collapse-action {
-  display: inline-block;
+  display: flex;
+  align-items: center;
   background-color: transparent;
   border: none;
+  line-height: 1rem;
 }
