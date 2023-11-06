@@ -2,44 +2,31 @@
 /******/ 	"use strict";
 var __webpack_exports__ = {};
 
-;// CONCATENATED MODULE: ./src/scripts/modules/header/header.js
-function header() {
-  var burgerLines = document.querySelectorAll(".burger__line");
-  var headerBurger = document.querySelector(".header__burger");
-  var navigationBurger = document.querySelector(".navigation__burger");
-  var overlay = document.querySelector(".navigation__overlay");
-  var navigation = document.querySelector(".navigation__container");
-  var desktopWidth = 1440;
-  var width = document.body.clientWidth;
-  function openNavigation() {
-    navigation.classList.add("navigation__container--open");
-    overlay.classList.add("navigation__overlay--open");
-    overlay.classList.remove("visibility-hidden");
-
-    //В бургере 3 линии. 0-2 (цикл не нужен)
-    burgerLines[0].classList.add('active');
-    burgerLines[1].classList.add('active');
-    burgerLines[2].classList.add('active');
-  }
-  function closeNavigation() {
-    navigation.classList.remove("navigation__container--open");
-    overlay.classList.remove("navigation__overlay--open");
-    overlay.classList.add("visibility-hidden");
-    burgerLines[0].classList.remove('active');
-    burgerLines[1].classList.remove('active');
-    burgerLines[2].classList.remove('active');
-  }
-  if (width > desktopWidth) {
-    closeNavigation();
-  }
-  headerBurger.addEventListener("click", function (event) {
-    openNavigation();
+;// CONCATENATED MODULE: ./src/scripts/ui/collapse/collapse.js
+function collapse() {
+  var collapseActions = document.querySelectorAll(".collapse-action");
+  var collapses = document.querySelectorAll(".collapse");
+  var collapsesFlags = [];
+  collapseActions[0].addEventListener('click', function (event) {
+    collapses[0].classList.toggle("collapse--open-mt30");
   });
-  navigationBurger.addEventListener("click", function (event) {
-    closeNavigation();
-  });
-  overlay.addEventListener("click", function (event) {
-    closeNavigation();
+  collapseActions.forEach(function (action, index) {
+    collapsesFlags.push(false);
+    action.addEventListener("click", function (event) {
+      var dataset = action.dataset.open;
+      var text = action.querySelector('.collapse--text');
+      collapses[index].classList.toggle("collapse--open");
+      collapsesFlags[index] = !collapsesFlags[index];
+      if (!collapsesFlags[index] && dataset === 'content') {
+        text.textContent = "Показать все";
+        return;
+      }
+      if (!collapsesFlags[index] && dataset === 'typeparagraph') {
+        text.textContent = "Читать далее";
+        return;
+      }
+      text.textContent = "Cвернуть";
+    });
   });
 }
 
@@ -9393,31 +9380,44 @@ function slider() {
 ;// CONCATENATED MODULE: ./src/scripts/modules/index.js
 
 
+;// CONCATENATED MODULE: ./src/scripts/loyout/header/header.js
+function header() {
+  var burgerLines = document.querySelectorAll(".burger__line");
+  var headerBurger = document.querySelector(".header__burger");
+  var navigationBurger = document.querySelector(".navigation__burger");
+  var overlay = document.querySelector(".navigation__overlay");
+  var navigation = document.querySelector(".navigation__container");
+  var desktopWidth = 1440;
+  var width = document.body.clientWidth;
+  function openNavigation() {
+    navigation.classList.add("navigation__container--open");
+    overlay.classList.add("navigation__overlay--open");
+    overlay.classList.remove("visibility-hidden");
 
-;// CONCATENATED MODULE: ./src/scripts/ui/collapse/collapse.js
-function collapse() {
-  var collapseActions = document.querySelectorAll(".collapse-action");
-  var collapses = document.querySelectorAll(".collapse");
-  var collapsesFlags = [];
-  collapseActions[0].addEventListener('click', function (event) {
-    collapses[0].classList.toggle("collapse--open-mt30");
+    //В бургере 3 линии. 0-2 (цикл не нужен)
+    burgerLines[0].classList.add('active');
+    burgerLines[1].classList.add('active');
+    burgerLines[2].classList.add('active');
+  }
+  function closeNavigation() {
+    navigation.classList.remove("navigation__container--open");
+    overlay.classList.remove("navigation__overlay--open");
+    overlay.classList.add("visibility-hidden");
+    burgerLines[0].classList.remove('active');
+    burgerLines[1].classList.remove('active');
+    burgerLines[2].classList.remove('active');
+  }
+  if (width > desktopWidth) {
+    closeNavigation();
+  }
+  headerBurger.addEventListener("click", function (event) {
+    openNavigation();
   });
-  collapseActions.forEach(function (action, index) {
-    collapsesFlags.push(false);
-    action.addEventListener("click", function (event) {
-      var dataset = action.dataset.open;
-      collapses[index].classList.toggle("collapse--open");
-      collapsesFlags[index] = !collapsesFlags[index];
-      if (!collapsesFlags[index] && dataset === 'content') {
-        action.textContent = "Показать все";
-        return;
-      }
-      if (!collapsesFlags[index] && dataset === 'typeparagraph') {
-        action.textContent = "Читать далее";
-        return;
-      }
-      action.textContent = "Cвернуть";
-    });
+  navigationBurger.addEventListener("click", function (event) {
+    closeNavigation();
+  });
+  overlay.addEventListener("click", function (event) {
+    closeNavigation();
   });
 }
 
@@ -9465,12 +9465,13 @@ function index() {
 
 
 
+
 function initialization() {
-  index();
-  header();
+  collapse();
   navigation();
   slider();
-  collapse();
+  header();
+  index();
 }
 initialization();
 /******/ })()
