@@ -1,6 +1,6 @@
 .about {
   &__container {
-    margin-top: 32px;
+    padding-top: 32px;
   }
 
   &__content {
@@ -8,11 +8,11 @@
   }
 
   &__collapse {
-    margin-bottom: 14px;
+    padding-bottom: 14px;
   }
 
   &__picture {
-    margin-top: 12px;
+    padding-top: 12px;
   }
 }
 
@@ -22,12 +22,9 @@
     &__container {
       display: flex;
       align-items: center;
-      padding: 0 30px;
+      padding-left: 30px;
+      padding-left: 30px;
       gap: 0 48px;
-    }
-
-    &__content {
-      padding: 0 20px;
     }
 
     &__content {
