@@ -4,6 +4,10 @@ body {
   background-color: $fon-color;
 }
 
+button {
+  cursor: pointer;
+}
+
 .app {
   position: relative;
   min-height: 100vh;
